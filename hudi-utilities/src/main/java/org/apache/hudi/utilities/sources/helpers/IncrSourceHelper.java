@@ -130,7 +130,7 @@ public class IncrSourceHelper {
       }
     });
 
-    String previousInstantTime = beginInstantTime;
+    String previousInstantTime = DEFAULT_BEGIN_TIMESTAMP;
     if (!beginInstantTime.equals(DEFAULT_BEGIN_TIMESTAMP)) {
       Option<HoodieInstant> previousInstant = activeCommitTimeline.findInstantBefore(beginInstantTime);
       if (previousInstant.isPresent()) {
